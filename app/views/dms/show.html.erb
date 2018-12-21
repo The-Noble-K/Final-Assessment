@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @dm.message %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @dm.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_dm_path(@dm) %> |
+<%= link_to 'Back', dms_path %>

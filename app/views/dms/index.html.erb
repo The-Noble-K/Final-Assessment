@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dms.each do |dm| %>
+      <tr>
+        <td><%= dm.message %></td>
+        <td><%= dm.user_id %></td>
+        <td><%= link_to 'Show', dm %></td>
+        <td><%= link_to 'Edit', edit_dm_path(dm) %></td>
+        <td><%= link_to 'Destroy', dm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dm', new_dm_path %>
